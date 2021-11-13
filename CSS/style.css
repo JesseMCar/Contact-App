@@ -29,15 +29,17 @@
         list-style-type: none;
         padding: 5px;
     }
-.whitebox {
-    background-color: hsl(0, 0%, 100%);
-    border-color: #9893a5;
-    border: solid 2px;
-    height: 3em;
-    width: 8rem;
-    text-align: center;
-    margin: 10px;
-}
+    .whitebox {
+        background-color: hsl(0, 0%, 100%);
+        grid-column-start: 1;
+        border-color: #9893a5;
+        border: solid 2px;
+        height: 3em;
+        width: 8em;
+        text-align: center;
+        margin: 10px;
+        line-height: 3rem;
+    }
 .save {
     background-color: #56949f;
     height: 3em;
@@ -54,6 +56,11 @@
 }
 
 .page2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 7em;
+    justify-content: space-between;
+    text-align: center;
     padding: 100px; 
 }
 .row {
@@ -65,6 +72,14 @@
     width: 6rem;
     height: 6rem
 }
+.page2 > img {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+}
+
 }
 
 
@@ -110,17 +125,28 @@
     }
     .whitebox {
         background-color: hsl(0, 0%, 100%);
+        grid-column-start: 1;
         border-color: #9893a5;
         border: solid 2px;
         height: 3em;
-        width: 16vw;
+        width: 25vw;
         text-align: center;
         margin: 10px;
+        line-height: 3rem;
     }
+
+    .page2 > img {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        width: 2rem;
+        height: 2rem;
+        align-self: center;
+    }
+
     .save {
         background-color: #56949f;
         height: 3em;
-        width: 10vw;
+        width: 12vw;
         text-align: center;
         margin: 10px;
         line-height: 3rem;
@@ -128,7 +154,7 @@
     .cancel {
         background-color: #b4637a;
         height: 3em;
-        width: 10vw;      
+        width: 11vw;      
         text-align: center;
         margin: 10px;
         line-height: 3rem;
@@ -137,7 +163,7 @@
     .edit {
         background-color: #56949f;
         height: 3em;
-        width: 10vw;      
+        width: 11vw;      
         text-align: center;
         margin: 10px;
         line-height: 3rem;
@@ -145,27 +171,38 @@
     .close {
         background-color: #817c9c;
         height: 3em;
-        width: 10vw;      
+        width: 11vw;      
         text-align: center;
         margin: 10px;
         line-height: 3rem;
     }
 
     .page2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 7em;
+        justify-content: space-between;
+        text-align: center;
         padding: 100px; 
     }
     .row {
         display: flex; 
         flex-direction: row; 
         line-height: 6rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
     .info > p {
         font-size: 20px;
+    }
+    .info {
+        grid-column-start: 1;
     }
     .thumbnail > img {
         padding: 5px;
         width: 8rem;
         height: 8rem;
+        border-radius: 50%;
     }
     a:visited {color: #232136;}
     a:hover {color: #3f3c53;}
